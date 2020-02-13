@@ -12,7 +12,8 @@
     "test": "jest",
     "start": "nodemon server/index.js",
     "build": "webpack -d -w",
-    "mongoCsv": "node database-benchmark/mongoDB/resources/createSampleData.js"
+    "mongoCsv": "node database-benchmark/mongoDB/resources/createSampleData.js",
+    "mongo-seed": "mongoimport --type csv -d rei -c SearchTerms --headerline --drop ./database-benchmark/mongoDB/resources/sampleDataM.csv"
   },
   "jest": {
     "testEnvironment": "node"

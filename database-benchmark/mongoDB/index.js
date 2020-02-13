@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb://localhost/benchmark';
+const mongoURI = 'mongodb://localhost/rei';
 
 mongoose.set('useCreateIndex', true);
 
