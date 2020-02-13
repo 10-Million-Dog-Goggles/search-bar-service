@@ -13,15 +13,15 @@ const writeTenMillionEntries = (writer, encoding, callback) => {
     do {
       i -= 1;
       id += 1;
-      const data = `${faker.commerce.productMaterial()} ${faker.commerce.product()}`;
+      const data = `${id},${faker.commerce.productMaterial()} ${faker.commerce.product()}\n`;
       if (i === 0) {
         writer.write(data, encoding, callback);
       } else {
         ok = writer.write(data, encoding);
       }
-    } while (i > i && ok);
+    } while (i > 0 && ok);
     if (i > 0) {
-      write.once('drain', write);
+      writer.once('drain', write);
     }
   };
   write();
