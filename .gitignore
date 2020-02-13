@@ -26,3 +26,5 @@ build/
 bundle.js
 # dist/ might want to undo this comment, but for now leave it as is
 
+# SDC data
+sampleDataM.csv
