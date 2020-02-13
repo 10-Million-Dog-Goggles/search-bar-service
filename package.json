@@ -11,7 +11,8 @@
     "seed": "node database/seed.js",
     "test": "jest",
     "start": "nodemon server/index.js",
-    "build": "webpack -d -w"
+    "build": "webpack -d -w",
+    "mongoCsv": "node database-benchmark/mongoDB/resources/createSampleData.js"
   },
   "jest": {
     "testEnvironment": "node"

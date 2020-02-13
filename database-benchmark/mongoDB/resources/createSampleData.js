@@ -1,4 +1,3 @@
-// const fs = require('fs');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const faker = require('faker');
 // const mongoose = require('mongoose');
@@ -18,7 +17,7 @@ const csvWriter = createCsvWriter({
 const data = [];
 
 for (var i = 0; i <= 100; i++) {
-  data.push({ id: `${i}`, term: `${faker.commerce.product()}` });
+  data.push({ id: `${i}`, term: `${faker.commerce.productName()}` });
 }
 
 csvWriter
