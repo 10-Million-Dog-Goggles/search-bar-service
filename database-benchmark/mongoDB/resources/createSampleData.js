@@ -16,8 +16,8 @@ const csvWriter = createCsvWriter({
 
 const data = [];
 
-for (var i = 0; i <= 100; i++) {
-  data.push({ id: `${i}`, term: `${faker.commerce.productName()}` });
+for (var i = 0; i <= 10000000; i++) {
+  data.push({ id: `${i}`, term: `${faker.commerce.productMaterial()} ${faker.commerce.product()}` });
 }
 
 csvWriter
