@@ -1,10 +1,10 @@
-const model = require('../database/models.js');
+const model = require('../database-benchmark/mongoDB/model.js');
 
 module.exports = {
   getAll: (req, res) => {
-    model.getAll()
-      .then(allItems => {
-        res.status(200).send(allItems);
+    model.autocomplete()
+      .then(items => {
+        res.status(200).send(items);
       })
       .catch(err => res.status(200).send(err));
   }
