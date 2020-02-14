@@ -1,5 +1,5 @@
 const Search = require('index.js');
 
 module.exports = {
-  autocomplete: (regex) => Search.find({ term: { $regex: regex, $options: 'i' } }).limit(10),
+  autocomplete: (regexp) => Search.find({ 'term': { $regex: regexp, $options: 'i' } }).limit(10),
 };
