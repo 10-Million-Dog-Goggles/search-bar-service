@@ -13,7 +13,7 @@ const writeTenMillionEntries = (writer, encoding, callback) => {
     do {
       i -= 1;
       id += 1;
-      const data = `${id},${faker.commerce.productMaterial()} ${faker.commerce.product()}\n`;
+      const data = `${id},${faker.lorem.words(faker.random.number({ min: 2, max: 4}))} ${faker.commerce.product()}\n`;
       if (i === 0) {
         writer.write(data, encoding, callback);
       } else {
