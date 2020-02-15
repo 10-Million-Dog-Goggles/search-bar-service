@@ -8,7 +8,7 @@ module.exports = {
     }
     regexString += '.*';
     model.autocomplete(regexString)
-      .then((items) => res.status(200).send(items))
+      .then((data) => res.status(200).send(data))
       .catch(err => res.status(400).send(err));
   }
 };
