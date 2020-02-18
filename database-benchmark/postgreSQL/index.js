@@ -1,12 +1,18 @@
-const Pool = require('pg').Pool;
+const pg = require('pg');
 
-const pool = new Pool({
+const params = {
   user: 'gienappa',
-  host: 'localhost',
-  database: 'searchterms',
   password: '66jtune66',
+  database: 'searchterms',
   port: 5432,
-});
+};
 
+const connectionString = `postgresql://${params.user}:${params.password}@localhost:${params.port}/${params.database}`;
 
-module.exports = pool;
+const client = new pg.Client(connectionString);
+
+client.connect()
+  .then(() => console.log('postgres connected'))
+  .catch(err => console.error('postgres connection error: ', err.stack));
+
+module.exports = client;
