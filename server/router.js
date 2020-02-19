@@ -3,6 +3,6 @@ const controllers = require('./controller.js');
 
 router
   .route('/search')
-  .get(controllers.getAllM);
+  .get(controllers.getAllP);
 
 module.exports = router;
