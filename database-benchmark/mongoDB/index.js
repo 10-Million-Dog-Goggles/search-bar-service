@@ -6,8 +6,10 @@ mongoose.set('useUnifiedTopology', true);
 
 const searchSchema = new mongoose.Schema({
   id: { type: Number, unique: true},
-  term: { type: String, lowercase: true, trim: true }
+  term: { type: String, trim: true }
 });
+
+searchSchema.index({ term: 'text' });
 
 mongoose.connect(mongoURI, {useNewUrlParser: true});
 
