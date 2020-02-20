@@ -27,9 +27,14 @@ describe('database', () => {
   //     });
   // });
 
-  test ('MongoDB should retrieve results in less than 50ms', () => {
+  test ('MongoDB should retrieve results in less than 50ms', (done) => {
     const testStrings = ['.*a.*u.*t.*', '.*b.*a.*r.*t.*', '.*l.*i.*d.*e.*r.*o.*', '.*t.*e.*s.*t.*'];
-    
+    const queryArray = testStrings.map(str => queryArray.push(modelM.getResults(str).explain('executionStats')));
+    Promise.all(queryArray)
+      .then(results => {
+        console.log(results);
+        done();
+      });
   });
   
 });
