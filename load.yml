@@ -1,9 +1,16 @@
 config:
-  target: 'https://localhost:3001'
+  target: 'http://localhost:3001'
+  tls:
+    rejectUnauthorized: false
   phases:
-    - duration: 10
-      arrivalRate: 20
+    - duration: 2
+      arrivalRate: 800
+  defaults:
+    headers:
+      Content-Type: "application/json"
 scenarios:
   - flow:
     - get:
-      url: "/api/search/?term=omnisduct"
+        url: "/api/search/"
+        qs:
+          term: "boat"
