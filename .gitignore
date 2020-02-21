@@ -28,3 +28,6 @@ bundle.js
 
 # SDC data
 sampleDataM.csv
+
+#New Relic
+newrelic.js
