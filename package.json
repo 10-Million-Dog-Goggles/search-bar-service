@@ -13,7 +13,8 @@
     "start": "nodemon server/index.js",
     "build": "webpack -d -w",
     "csv": "node database-benchmark/mongoDB/resources/createSampleData.js",
-    "mongo-seed": "mongoimport --type csv -d rei -c searchterms --headerline --drop ./database-benchmark/mongoDB/resources/sampleDataM.csv"
+    "mongo-seed": "mongoimport --type csv -d rei -c searchterms --headerline --drop ./database-benchmark/mongoDB/resources/sampleDataM.csv",
+    "load": "artillery run load.yml"
   },
   "jest": {
     "testEnvironment": "node"
