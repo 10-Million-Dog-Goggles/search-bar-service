@@ -3,7 +3,7 @@ config:
   phases:
     - duration: 10
       arrivalRate: 20
-  scenarios:
-    - flow:
-      - get:
-        url: "/api/search/?term=omnisduct"
+scenarios:
+  - flow:
+    - get:
+      url: "/api/search/?term=omnisduct"
