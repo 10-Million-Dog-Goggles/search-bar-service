@@ -9,7 +9,7 @@
   },
   "scripts": {
     "seed": "node database/seed.js",
-    "test": "jest",
+    "test": "jest --forceExit",
     "start": "nodemon server/index.js",
     "build": "webpack -d -w",
     "csv": "node database-benchmark/mongoDB/resources/createSampleData.js",
