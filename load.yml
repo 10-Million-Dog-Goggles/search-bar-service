@@ -3,8 +3,8 @@ config:
   tls:
     rejectUnauthorized: false
   phases:
-    - duration: 7
-      arrivalRate: 400
+    - duration: 3
+      arrivalRate: 700
   defaults:
     headers:
       Content-Type: "application/json"
@@ -13,4 +13,4 @@ scenarios:
     - get:
         url: "/api/search/"
         qs:
-          term: "tabu"
+          term: "perferendis"
