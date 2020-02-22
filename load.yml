@@ -1,0 +1,16 @@
+config:
+  target: 'http://localhost:3001'
+  tls:
+    rejectUnauthorized: false
+  phases:
+    - duration: 3
+      arrivalRate: 700
+  defaults:
+    headers:
+      Content-Type: "application/json"
+scenarios:
+  - flow:
+    - get:
+        url: "/api/search/"
+        qs:
+          term: "perferendis"
