@@ -4,7 +4,7 @@ config:
     rejectUnauthorized: false
   phases:
     - duration: 3
-      arrivalRate: 700
+      arrivalRate: 600
   defaults:
     headers:
       Content-Type: "application/json"
@@ -13,4 +13,4 @@ scenarios:
     - get:
         url: "/api/search/"
         qs:
-          term: "perferendis"
+          term: "bort"
