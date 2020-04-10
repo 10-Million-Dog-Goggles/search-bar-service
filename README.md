@@ -4,10 +4,8 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/10-Million-Dog-Goggles/product-view-service
+  - https://github.com/10-Million-Dog-Goggles/q-and-a-service
 
 ## Table of Contents
 
